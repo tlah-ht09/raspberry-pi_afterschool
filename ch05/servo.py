@@ -5,7 +5,7 @@ cur = conn.cursor() #SQL 문을 실행하거나 실행된 결과를 돌려받는
 
 def add_status(status):
     try:
-        cur.execute("insert into record_angle(status) values('{0}')".format(status))
+        cur.execute("insert into record_angle(angle) values('{0}')".format(status))
         conn.commit()
     except:
         print('f')
