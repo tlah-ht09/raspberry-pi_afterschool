@@ -1,7 +1,7 @@
 const input = document.getElementById("input");
 const send = document.getElementById("send");
 
-const go = 90;
+const go = 10;
 
 window.addEventListener("keydown", async (e) => {
   if (e.key == "ArrowLeft") {
