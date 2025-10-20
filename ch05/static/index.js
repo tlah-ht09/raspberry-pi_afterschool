@@ -1,8 +1,6 @@
 const input = document.getElementById("input");
 const send = document.getElementById("send");
 
-const img = document.getElementById("img");
-
 const go = 10;
 
 window.addEventListener("keydown", async (e) => {
