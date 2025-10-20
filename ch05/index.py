@@ -20,10 +20,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-@app.route("/send/<value>")
-def led_y_on(value):
+@app.route("/send",methods=["POST"])
+def led_y_on():
     try:
-        setAngle(value)
+        setAngle(request.get_json())
         print("ok")
         return "ok"
     except:
