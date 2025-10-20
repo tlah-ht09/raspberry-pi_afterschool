@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 import RPi.GPIO as GPIO
-import servo
+from servo import add_status
 
 
 
@@ -25,12 +25,12 @@ def home():
 def led_y_on():
     try:
         setAngle(request.get_json())
-        servo.add_status(request.get_json())
+        add_status(request.get_json())
         print("ok")
         
         return "ok"
     except:
-        print("fuckkk")
+        print("fail")
         return "fail"
 
 
