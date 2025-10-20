@@ -2,7 +2,7 @@ const input = document.getElementById("input");
 const send = document.getElementById("send");
 
 const img = document.getElementById("img");
-img.src = "/천칭 기본 복사본.png";
+
 const go = 10;
 
 window.addEventListener("keydown", async (e) => {
