@@ -5,12 +5,14 @@ const go = 5;
 
 window.addEventListener("keydown", async (e) => {
   if (e.key == LeftArrow) {
+    console.log("left");
     const response = await fetch(`/send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(go),
     });
   } else if (e.key == RightArrow) {
+    console.log("right");
     const response = await fetch(`/send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
