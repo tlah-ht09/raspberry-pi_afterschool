@@ -1,4 +1,5 @@
 const send = document.getElementById("send");
+const img = document.getElementById("img");
 
 const go = 10;
 
