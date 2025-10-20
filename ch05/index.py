@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 import RPi.GPIO as GPIO
-import db_model
+
 
 
 GPIO.setmode(GPIO.BOARD)
