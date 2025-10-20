@@ -4,8 +4,9 @@ import RPi.GPIO as GPIO
 
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(16, GPIO.OUT)
-servo = GPIO.PWM(16, 50)
+GPIO.setup(8, GPIO.OUT)
+servo = GPIO.PWM(8, 50)
+servo.start(0)
 
 
 def setAngle(angle):
@@ -23,8 +24,10 @@ def home():
 def led_y_on(value):
     try:
         setAngle(value)
+        print("ok")
         return "ok"
     except:
+        print("fuckkk")
         return "fail"
 
 
