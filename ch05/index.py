@@ -9,7 +9,7 @@ servo = GPIO.PWM(16, 50)
 
 
 def setAngle(angle):
-    duty = 2.5 + 10 * angle / 180
+    duty = 2.5 + 10 * int(angle) / 180
     print(f"degree : {angle} to {duty}(duty)")
     servo.ChangeDutyCycle(duty)
 
