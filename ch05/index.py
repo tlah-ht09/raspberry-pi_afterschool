@@ -25,6 +25,7 @@ def led_y_on():
     try:
         setAngle(request.get_json())
         print("ok")
+        servo.ChangeDutyCycle(0)
         return "ok"
     except:
         print("fuckkk")
