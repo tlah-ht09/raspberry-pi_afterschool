@@ -1,4 +1,3 @@
-const input = document.getElementById("input");
 const send = document.getElementById("send");
 
 const go = 10;
