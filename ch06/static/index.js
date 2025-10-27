@@ -6,7 +6,7 @@ now.addEventListener("click", async () => {
     method: "GET",
   });
   const data = await response.json(); // JSON으로 파싱
-  console.log("온도:", data.temperature, "습도:", data.humidity);
+  console.log(data);
 });
 
 record.addEventListener("click", async () => {
