@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, jsonify
-import db_model
+from db_model  import MySQL
 import sensor_dht
 
 app = Flask(__name__)
+
+db_model = MySQL()
 
 @app.route("/")
 def home():
