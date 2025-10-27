@@ -18,7 +18,7 @@ class MySQL:
 
     def selectAll(self):
         sql = "select * from record_dht"
-        self.cur.execute(sql)
-        result = self.cur.fetchall()
-        return result
+        all_list = self.cur.execute(sql)
+        all_list = self.cur.fetchall()
+        return all_list
     
