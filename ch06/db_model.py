@@ -13,7 +13,7 @@ class MySQL:
         self.cur.execute(sql)
         
         self.db.commit()
-        print("ㅅ")
+
         return [temp, hum]
 
     def selectAll(self):
