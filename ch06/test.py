@@ -14,7 +14,9 @@ def now():
         current = sensor_dht.get_now()
         db_model.add(current[0],current[1])
         return current
-    except: return "완전 실패함"
+    except:
+        print("실패함")
+        return [1,2]
 
 @app.route("/record")
 def record():
