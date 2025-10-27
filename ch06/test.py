@@ -1,14 +1,25 @@
-import adafruit_dht
-import board
+from flask import Flask, request, render_template
+import db_model
+import sensor_dht
 
-sensor = adafruit_dht.DHT11(board.D14) # GPIO 14를 뜻함
+app = Flask(__name__)
 
-# 자신의 파이썬 버전이 3.13이면 아래 코드로 대체
-# sensor = adafruit_dht.DHT11(board.D14, use_pulseio=False)
+@app.route("/")
+def home():
+  return render_template("index.html")
+    
+@app.route("/now")
+def now():
+    temperature, huminity = sensor_dht.get_now()
+    result = db_model.add(temperature, huminity)
+    return result
+
+@app.route("/record")
+def record():
+    result = db_model.selectAll()
+    return jsonify(result)
 
 
-temp = sensor.temperature
-hum = sensor.humidity
-
-print([temp, hum])
+if __name__ == "__main__":
+    app.run(host="0.0.0.0",port=5001)
 
