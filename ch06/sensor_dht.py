@@ -7,4 +7,4 @@ def get_now():
         temperature = sensor.temperature
         huminity = sensor.humidity
         return [temperature, huminity]
-    except : print('실패')
+    except : return '실패'
