@@ -10,9 +10,11 @@ def home():
     
 @app.route("/now")
 def now():
-    current = sensor_dht.get_now()
-    result = db_model.add(current[0],current[1])
-    return result
+    try:
+        current = sensor_dht.get_now()
+        result = db_model.add(current[0],current[1])
+        return result
+    except: print("완전 실패함")
 
 @app.route("/record")
 def record():
