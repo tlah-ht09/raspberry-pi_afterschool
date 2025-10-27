@@ -5,12 +5,12 @@ now.addEventListener("click", async () => {
   const response = await fetch("/now", {
     method: "GET",
   });
-  console.log(response);
+  console.log(response.body);
 });
 
 record.addEventListener("click", async () => {
   const response = await fetch("/now", {
     method: "GET",
   });
-  console.log(response);
+  console.log(response.body);
 });
