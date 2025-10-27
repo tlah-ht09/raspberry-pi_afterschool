@@ -7,7 +7,7 @@ class MySQL:
         print("connect ok")
 
     def add(self, temp, hum):
-        sql = "insert into record_dht(temperature, humidity) values('{0}', '{1}')".format(temp, hum)
+        sql = "insert into record_dht(temperature, humidity) values({0}, {1})".format(temp, hum)
         self.cur.execute(sql)
         self.db.commit()
         return [temp, hum]
