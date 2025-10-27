@@ -11,5 +11,5 @@ def get_now():
     
     except : 
         print("실패")
-        return ['실','패']
+        return '실패'
 

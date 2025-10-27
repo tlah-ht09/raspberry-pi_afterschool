@@ -12,8 +12,8 @@ def home():
 def now():
     try:
         current = sensor_dht.get_now()
-        result = db_model.add(current[0],current[1])
-        return result
+        db_model.add(current[0],current[1])
+        return current
     except: return "완전 실패함"
 
 @app.route("/record")
