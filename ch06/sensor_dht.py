@@ -6,4 +6,3 @@ def get_now():
     temperature = sensor.temperature
     huminity = sensor.humidity
     return [temperature, huminity]
-
