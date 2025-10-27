@@ -23,7 +23,7 @@ now.addEventListener("click", async () => {
 });
 
 record.addEventListener("click", async () => {
-  const response = await fetch("/now", {
+  const response = await fetch("/record", {
     method: "GET",
   });
   const data = await response.json();
