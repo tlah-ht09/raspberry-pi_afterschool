@@ -1,7 +1,7 @@
 import adafruit_dht
 import board
 
-sensor = adafruit_dht.DHT11(board.D18)
+sensor = adafruit_dht.DHT11(board.D14)
 
 def get_now():
     try:
