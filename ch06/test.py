@@ -15,7 +15,7 @@ def now():
         db_model.add(current[0],current[1])
         return current
     except:
-        print("실패함")
+
         return [1,2]
 
 @app.route("/record")
