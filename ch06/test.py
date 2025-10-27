@@ -24,7 +24,9 @@ def now():
 
 @app.route("/record")
 def record():
-    result = db_model.selectAll()
+    try:
+        result = db_model.selectAll()
+    except:print("오류 발생")
     return jsonify(result)
 
 

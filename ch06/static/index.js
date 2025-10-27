@@ -26,5 +26,11 @@ record.addEventListener("click", async () => {
   const response = await fetch("/now", {
     method: "GET",
   });
-  console.log(response.body);
+  const data = await response.json();
+  console.log(data);
+
+  const cellNo = newRow.insertCell(0);
+  const cellDate = newRow.insertCell(1);
+  const cellTemp = newRow.insertCell(2);
+  const cellHum = newRow.insertCell(3);
 });
