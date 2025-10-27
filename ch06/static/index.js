@@ -23,6 +23,7 @@ now.addEventListener("click", async () => {
 });
 
 record.addEventListener("click", async () => {
+  table.innerHTML = "";
   const response = await fetch("/record", {
     method: "GET",
   });
