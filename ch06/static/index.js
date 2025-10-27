@@ -31,5 +31,6 @@ record.addEventListener("click", async () => {
 
   for (const item of data) {
     console.log(item);
+    console.log("d");
   }
 });
