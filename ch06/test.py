@@ -10,8 +10,8 @@ def home():
     
 @app.route("/now")
 def now():
-    temperature, huminity = sensor_dht.get_now()
-    result = db_model.add(temperature, huminity)
+    current = sensor_dht.get_now()
+    result = db_model.add(current[0],current[1])
     return result
 
 @app.route("/record")
