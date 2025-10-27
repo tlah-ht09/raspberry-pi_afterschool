@@ -3,6 +3,7 @@ const record = document.getElementById("record");
 const table = document.getElementById("table");
 
 now.addEventListener("click", async () => {
+  table.innerHTML = "";
   const response = await fetch("/now", {
     method: "GET",
   });
