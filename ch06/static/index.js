@@ -36,9 +36,9 @@ record.addEventListener("click", async () => {
     const cellTemp = newRow.insertCell(2);
     const cellHum = newRow.insertCell(3);
 
-    cellNo.innerHTML = data[0];
-    cellDate.innerHTML = data[3];
-    cellTemp.innerHTML = data[2];
-    cellHum.innerHTML = data[1];
+    cellNo.innerHTML = item[0];
+    cellDate.innerHTML = item[3];
+    cellTemp.innerHTML = item[2];
+    cellHum.innerHTML = item[1];
   }
 });
