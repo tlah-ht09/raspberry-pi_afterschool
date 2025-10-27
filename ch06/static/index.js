@@ -27,10 +27,18 @@ record.addEventListener("click", async () => {
     method: "GET",
   });
   const data = await response.json();
-  console.log(data);
 
   for (const item of data) {
-    console.log(item);
-    console.log("d");
+    const newRow = table.insertRow(-1);
+
+    const cellNo = newRow.insertCell(0);
+    const cellDate = newRow.insertCell(1);
+    const cellTemp = newRow.insertCell(2);
+    const cellHum = newRow.insertCell(3);
+
+    cellNo.innerHTML = data[0];
+    cellDate.innerHTML = data[3];
+    cellTemp.innerHTML = data[2];
+    cellHum.innerHTML = data[1];
   }
 });
