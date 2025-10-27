@@ -10,11 +10,10 @@ class MySQL:
       
         sql = "insert into record_dht(temperature, humidity) values({0}, {1})".format(temp, hum)
 
-        
         self.cur.execute(sql)
         
-        try : self.db.commit()
-        except : print("ㅅ")
+        self.db.commit()
+        print("ㅅ")
         return [temp, hum]
 
     def selectAll(self):

@@ -12,7 +12,9 @@ def home():
 def now():
     try:
         current = sensor_dht.get_now()
-        db_model.add(current[0],current[1])
+        try:
+            db_model.add(current[0],current[1])
+        except: print("db 오류")
         return current
     except:
 
